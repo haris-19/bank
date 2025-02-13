@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Checking the Balance </h1>
+  
+{% if flag %}
+{{bal}}
+{% else %}
+<form action=" " method="POST">
+    {% csrf_token %}
+    <label for="acc">Account_number</label>
+    <input type="number" name="acc" id="acc">
+    <label for="pin">Pin</label>
+    <input type="number" name="pin" id="pin">
+    <button type="submit">CHECK BALANCE</button>
+</form>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* 
+*{
+
+    padding: 0%;
+    box-sizing: border-box;
+}
+main div img{
+    height: 200px;
+    width: 200px;
+}
+main{
+    margin: 150px auto;
+    height: 500px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+
+}
+main div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+} */
+
+/* style.css */
+
+body {
+    font-family: sans-serif; /* Choose a suitable font */
+    background-color: #eefbf5; /* Light background color */
+    margin: 0; /* Remove default margins */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+h1 {
+    text-align: center;
+    color: #01b898; /* Primary color for heading */
+    margin-top: 20px;
+}
+
+/* style.css */
+
+/* ... (other styles) ... */
+
+main {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+main > div {
+    /* ... (other div styles) ... */
+    width: auto; /* Let grid control the width */
+    height: auto; /* Let grid control the height */
+    display: flex; /* Keep flexbox for centering content within the div */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ... (rest of the styles) ... */
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        grid-template-rows: repeat(3, 1fr); /* Adjust rows as needed */
+    }
+}
+
+@media (max-width: 500px) { /* Even smaller screens */
+    main {
+        grid-template-columns: 1fr; /* 1 column */
+        grid-template-rows: repeat(6, 1fr); /* 6 rows */
+    }
+} 
+
+main > div:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+main img {
+    max-width: 100px; /* Make images responsive */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+main a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #01b898; /* Primary color for links */
+    font-weight: bold;
+    transition: color 0.2s ease; /* Smooth color transition */
+}
+
+main a:hover {
+    color: #019074; /* Darker shade on hover */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    main > div {
+        width: 150px; /* Smaller boxes on smaller screens */
+        height: 150px;
+    }
+    main img {
+        max-width: 80px;
+    }
+}
+
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0; /* Light gray background for footer */
+}

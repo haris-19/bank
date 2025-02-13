@@ -1,0 +1,66 @@
+body {
+    font-family: sans-serif;
+    background-color: #eefbf5;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+    margin: 0; /* Remove default margins */
+}
+
+h1 {
+    color: #01b898;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Adjust as needed */
+}
+
+label {
+    display: block; /* Make labels stack on top of inputs */
+    margin-bottom: 5px;
+    color: #333; /* Darker text for labels */
+}
+
+input[type="number"] {
+    width: calc(100% - 10px); /* Full width, accounting for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+button {
+    background-color: #01b898;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+    width: 100%;
+}
+
+button:hover {
+    background-color: #019074; /* Darker shade on hover */
+}
+
+/* Optional: Add some spacing between form elements */
+form > * {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 400px) {
+    form {
+        width: 90%; /* Make form wider on smaller screens */
+        padding: 20px;
+    }
+}

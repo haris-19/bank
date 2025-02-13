@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <center><h1>This is Home Page</h1></center>
+    <main>
+        <div>
+            <img src=" {%  static 'images/user_logo.png' %} " alt="">
+            <h4><a href="{% url 'create' %}">ACCOUNT CREATION</a></h4>
+
+        </div>
+        <div>
+            <img src=" {%  static 'images/2.png' %} " alt="">
+            <h4><a href="{% url 'pin' %}">PIN GENERATION</a></h4>
+
+        </div>
+        <div>
+            <img src=" {%  static 'images/3.png' %} " alt="">
+            <a href="{% url 'balance' %}"><h4>CHECKING BALANCE</h4></a>
+
+        </div>
+        <div>
+            <img src=" {%  static 'images/4.webp' %} " alt="">
+            <h4><a href="{%  url 'withdrawl' %}">WITHDRAWL</a></h4>
+            
+
+        </div>
+        <div>
+            <img src="{% static 'images/5.png' %}" alt="">
+            <h4><a href="{% url 'deposit' %}">DEPOSIT</a></h4>
+
+
+        </div>
+        <div>
+            <img src=" {%  static 'images/6.png' %} " alt="">
+            <h4><a href="{% url 'acc_transfer' %} ">ACCOUNT TRANSFER</a></h4>
+        </div>
+    </main>
+
+</body>
+</html>
+
+<!-- 
+main {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+}
+
+main > div {
+    background-color: white; /* White background for each box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    text-align: center; /* Center content within each box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}main {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+} -->
+
+

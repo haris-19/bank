@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%  load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/acc_transfer.css' %}">
+</head>
+<body>
+    <center><h1>ACCOUNT TRANSFER</h1></center>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <label for="sender_acc">Sender Account Number</label>
+        <input type="number" name="sender_acc" id="sender_acc"> <br><br>
+        <label for="receiver_acc">Receiver Account Number</label>
+        <input type="number" name="receiver_acc" id="receiver_acc"> <br><br>
+        <label for="pin">Pin</label>
+        <input type="number" name="pin" id="pin"> <br><br>
+        <label for="amt">Amount</label>
+        <input type="number" name="amt" id="amt">
+        <button type="submit">TRANSFER</button>
+    </form>
+</body>
+</html>

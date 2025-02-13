@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/deposit.css' %}">
+</head>
+<body>
+    <center><h1>DEPOSITING AMOUNT</h1></center>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="acc">Account Number</label>
+        <input type="number" name="acc" id="acc">
+        <label for="mobile">Phone Number</label>
+        <input type="number" name="mobile" id="mobile">
+        <label for="amt">Deposit Amount</label>
+        <input type="number" name="amt" id="amt">
+        <button type="submit">DEPOSIT</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/withdrawl.css' %}">
+
+</head>
+<body>
+    <center><h1>WITHDRAWL AMOUNT</h1></center>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="acc">Account Number</label>
+        <input type="number" name="acc" id="acc">
+        <label for="pin">Pin</label>
+        <input type="number" name="pin" id="pin">
+        <label for="amt">Amount</label>
+        <input type="number" name="amt" id="amt">
+        <button type="submit">WITHDRAW</button>
+
+    </form>
+
+</body>
+</html>
